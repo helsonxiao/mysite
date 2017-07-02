@@ -7,7 +7,7 @@
             <div class="date">
                 <p>published: {{ post.published_date }}</p>
             </div>
-            <p>{{ post.text|linebreaksbr }}</p>
+            <p>{{ post.text|linebreaksbr|truncatechars:150 }}</p>
         </div>
     {% endfor %}
 {% endblock %}
