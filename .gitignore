@@ -4,3 +4,4 @@ __pycache__
 env3.5
 /static
 .DS_Store
+/.idea
