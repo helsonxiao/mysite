@@ -1,43 +1,13 @@
-/* Responsive */
-@media screen and (max-device-width: 768px) {
-    .col-md-8 {
-        float: left;
-        width: 100%;
-        padding-left: 7%;
-        padding-right: 7%;
-    }
-
-    .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-        color: #ffffff;
-        font-size: 1.5em;
-        text-decoration: none;
-        text-align: center;
-    }
-
-    .post h2 a, .post h2 a:visited {
-        color: #000000;
-        font-size: 0.8em;
-    }
-}
-
 .page-header {
     background-color: #80B3FF;
     margin-top: 0%;
-    padding: 2%;
+    padding: 1.5%;
     width: auto;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 2em;
-    text-decoration: none;
-    text-align: center;
-}
-
-.page-header p {
+.header-btn p {
     color: #ffffff;
     font-size: 1.1em;
-    /*float: left;*/
     text-align: left;
     margin: auto;
 }
@@ -50,25 +20,29 @@
     margin-bottom: auto;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+.blog-name h1, .blog-name h1 a, .blog-name h1 a:visited, .blog-name h1 a:active {
+    color: #ffffff;
+    font-size: 28px;
+    text-decoration: none;
+    text-align: center;
 }
+
+
+/*h1, h2, h3, h4 {
+    font-family: 'Lobster', serif;
+}*/
 
 .content {
     width: 100%;
+    padding: 0;
 }
 
-/*.row {*/
-/*    margin-left: 10%;*/
-/*    margin-right: 10%;*/
-/*}*/
-
 .col-md-8 {
-        float: left;
-        width: 100%;
-        padding-left: 20%;
-        padding-right: 20%;
-    }
+    float: left;
+    width: 100%;
+    padding-left: 22%;
+    padding-right: 22%;
+}
 
 .save {
     float: right;
@@ -84,26 +58,27 @@ h1, h2, h3, h4 {
 
 .post h2 a, .post h2 a:visited {
     color: #000000;
-    font-size: 1em;
+    font-size: 20px;
 }
 
-.post p {
-    font-size: 1.2em;
-    margin-bottom: 1em;
+.post h2 {
+    font-size: 20px;
 }
 
-.post a {
-    font-size: 1.2em;
+.post h2 a.btn {
+    font-size: 0.5em;
+    float: right;
+    margin-left: 2%;
 }
 
 .date {
     color: #828282;
-    font-size: 1em;
-    margin-bottom:1.2em;
+    font-size: 15px;
 }
 
-.date p {
-    font-size: 1.2em;
+.post p {
+    font-size: 15px;
+    margin-bottom: 1em;
 }
 
 .comment {
@@ -111,5 +86,13 @@ h1, h2, h3, h4 {
 }
 
 .comment strong {
-    font-size: 1.2em;
+    font-size: 1.1em;
+}
+
+.comment.date {
+    font-size: 1.1em;
+}
+
+.comment.date.btn {
+    font-size:10px;
 }
