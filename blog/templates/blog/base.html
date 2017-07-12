@@ -5,8 +5,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="{% static 'css/mysite.css' %}">
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/mysite.css' %}">
         <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
         <title>Helson's Blog</title>
     </head>
@@ -26,16 +26,18 @@
             </div>
         </div>
 
-        <div class="content container">
+        <div class="content container-fluid">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 col-sm-8">
                 {% block content %}
                 {% endblock %}
                 </div>
             </div>
         </div>
+
         <script type="text/javascript">
-            $youziku.load("h1,h2", "ce6286b7815947f7be24198781cecf83", "SourceHanS-S_B");
+            $youziku.load("h2,h3,h4,h5,h6", "ce6286b7815947f7be24198781cecf83", "SourceHanS-S_B");
+            $youziku.load("p", "613fe3dff4584c2fb1cd089351f3c655", "Source-Han-Light");
             $youziku.draw();
         </script>
     </body>
