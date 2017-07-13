@@ -10,7 +10,7 @@
                 </h3>
                 <p class="date">published: {{ post.published_date }}</p>
             </div>
-            <p class="article">{{ post.text|linebreaksbr|truncatechars:100 }}</p>
+            <p class="article">{{ post.text|truncatechars:100|linebreaksbr }}</p>
 
             <div class="comment-num">
                 <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>
