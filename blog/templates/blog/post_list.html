@@ -1,14 +1,21 @@
 {% extends 'blog/base.html' %}
-
+{% load custom_markdown %}
 {% block content %}
     {% for post in posts %}
         <div class="post">
-            <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
-            <div class="date">
-                <p>published: {{ post.published_date }}</p>
+
+            <div class="post-header">
+                <h3>
+                    <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+                </h3>
+                <p class="date">published: {{ post.published_date }}</p>
             </div>
-            <p>{{ post.text|linebreaksbr|truncatechars:150 }}</p>
-            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>
+            <p class="article">{{ post.text|linebreaksbr|truncatechars:100 }}</p>
+
+            <div class="comment-num">
+                <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>
+            </div>
+
         </div>
     {% endfor %}
 {% endblock %}
