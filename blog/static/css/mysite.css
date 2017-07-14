@@ -1,52 +1,91 @@
+/* Universal */
+
 * {
-  /*border: 1px solid rgba(0, 0, 0, 0.2);*/
-  margin: 0;
-  padding: 0;
+    /*border: 1px solid rgba(0, 0, 0, 0.2);*/
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 15px;
 }
 
 h3 {
-    font-size: 18px;
-    display: inline;
-    margin: auto;
+    font-size: 1.2em;
 }
+
+/* Heading */
 
 .page-header {
     background-color: #80B3FF;
-    margin: 0 0 50px 0;
-    padding: 1.2%;
+    margin: 0;
     position: fixed;
     width: 100%;
+    height: 6.5em;
     z-index: 1000;
 }
 
-.header-btn p {
+/*.header-btn p {
     color: #ffffff;
     font-size: 1.1em;
     text-align: left;
     margin: auto;
-}
+}*/
 
 .top-menu, .top-menu:hover, .top-menu:visited {
     color: #ffffff;
     float: right;
     font-size: 1.5em;
-    margin-right: 1.5%;
-    margin-bottom: auto;
+    margin-top: 0.5em;
+    margin-right: 2.5%;
+    position: relative;
+    right: 12%;
 }
 
-.blog-name h1, .blog-name h1 a, .blog-name h1 a:visited, .blog-name h1 a:active {
+.banner h1, .banner h1 a, .banner h1 a:visited, .banner h1 a:active {
     color: #ffffff;
-    font-size: 35px;
+    font-size: 1.5em;
     text-align: center;
     font-family: 'Lobster', cursive;
+    clear: both;
 }
 
+
+/* Content */
+
 .col-md-8 {
-    position: relative;
     width: 100%;
     padding-left: 12%;
     padding-right: 12%;
-    padding-top: 150px;
+    padding-top: 8em;
+}
+
+.post {
+    margin-bottom: 3em;
+}
+
+.post h3 a, .post h3 a:visited {
+    color: #000000;
+}
+
+.post-header {
+    margin-bottom: 1em;
+}
+
+.post-header .btn {
+    margin-left: 2%;
+    float: right;
+}
+
+.date {
+    color: #828282;
+    text-align: left;
+    margin: auto;
+}
+
+.post h3 a.btn {
+    float: right;
+    margin-left: 2%;
 }
 
 .save {
@@ -57,46 +96,24 @@ h3 {
     width: 100%;
 }
 
-.btn {
-    margin-left: 1%;
-}
 
-.post {
-    margin-bottom: 70px;
-}
 
-.post p.article {
-    clear: both;
-}
-
-.post-header {
-    margin-bottom: 20px;
-}
-
-.post-header p {
-    color: #828282;
-    text-align: right;
-    margin: auto;
-}
-
-.post h3 a, .post h3 a:visited {
-    color: #000000;
-}
-
-.post h3 a.btn {
-    float: right;
-    margin-left: 2%;
-}
-
-.date {
-    color: #828282;
-    text-align: right;
-}
+/* Comment */
 
 .comment-num {
     text-align: right;
 }
 
+.comment-num a {
+    color: #000000
+}
+
 .comment {
     margin-top: 3%;
+}
+
+.comment .btn {
+    font-size: 0.7em;
+    position: absolute;
+    right: 71%;
 }

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 {% extends 'blog/base.html' %}
 
 {% block content %}
@@ -6,5 +7,7 @@
 			<h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
 			<p class="date">created: {{ post.created_date|date:'d-m-Y' }}</p>
 		</div>
+    {% empty %}
+        <p>No draft yet. Let's go to code!</p>
 	{% endfor %}
 {% endblock %}

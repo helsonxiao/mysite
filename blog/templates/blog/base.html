@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/mysite.css' %}">
-        <link rel="stylesheet" href="{% static 'css/friendly.css' %}">
+        <link rel="stylesheet" href="{% static '/css/mysite.css' %}">
+        <link rel="stylesheet" href="{% static '/css/friendly.css' %}">
         <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
         <title>Helson's Blog</title>
     </head>
@@ -19,11 +19,11 @@
                 <div class="header-btn">
                     <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
                     <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
-                    <!--<p> {{ user.username }} <small>( <a href="{% url 'logout' %}">Log out</a> )</small></p>-->
+                    <!--<p> {{ user.username }} <small>: <a href="{% url 'logout' %}">Log out</a></small></p>-->
                 </div>
             {% endif %}
 
-            <div class="blog-name">
+            <div class="banner">
                 <h1><a href="/">Helson's Blog</a></h1>
             </div>
         </div>
@@ -31,8 +31,8 @@
         <div class="content container">
             <div class="row">
                 <div class="col-md-8 col-sm-8">
-                {% block content %}
-                {% endblock %}
+                    {% block content %}
+                    {% endblock %}
                 </div>
             </div>
         </div>

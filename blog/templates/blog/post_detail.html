@@ -4,31 +4,36 @@
 
 {% block content %}
     <div class="post">
-        <h3>{{ post.title }}</h3>
-        {% if user.is_authenticated %}
+        <div class="post-header">
+            {% if user.is_authenticated %}
                 <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a> <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
-        {% endif %}
-        {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-        {% endif %}
-        <br>
-        <p class="article">{{ post.text|custom_markdown|linebreaksbr }}</p>
+            {% endif %}
+            <h3>{{ post.title }}</h3>
+            {% if post.published_date %}
+                <div class="date">
+                    {{ post.published_date }}
+                </div>
+            {% endif %}
+        </div>
+        <!--<br>-->
+        <div class="post-content">
+            <p>{{ post.text|custom_markdown|linebreaksbr }}</p>
+        </div>
     </div>
+
     {% if post.published_date %}
         <a href="{% url 'add_comment_to_post' pk=post.pk %}" class="btn btn-default">Add comment</a>
         <hr>
         {% for comment in post.comments.all %}
             <div class="comment">
                 <strong>{{ comment.author }}</strong>
+                {% if user.is_authenticated %}
+                    <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+                {% endif %}
                 <div class="date">
                     {{ comment.created_date }}
-                    {% if user.is_authenticated %}
-                        <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
-                    {% endif %}
                 </div>
-                <p>{{ comment.text|linebreaks }}</p>
+                <p class="comment-content">{{ comment.text|linebreaks }}</p>
             </div>
         {% empty %}
             <p>No comments here yet :(</p>
