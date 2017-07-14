@@ -42,12 +42,20 @@ h3 {
     right: 12%;
 }
 
+.banner {
+    position: absolute;
+    display: block;
+    top: 2.4em;
+    width: 100%;
+}
+
 .banner h1, .banner h1 a, .banner h1 a:visited, .banner h1 a:active {
     color: #ffffff;
     font-size: 1.5em;
     text-align: center;
     font-family: 'Lobster', cursive;
     clear: both;
+    margin: auto;
 }
 
 
