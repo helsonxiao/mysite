@@ -125,3 +125,18 @@ h3 {
     position: absolute;
     right: 71%;
 }
+
+/* Markdown */
+.post-content blockquote {
+    font-size: 1rem;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.post-content img {
+    width: 84%;
+    height: auto;
+    position: relative;
+    margin-left: 8%;
+}
